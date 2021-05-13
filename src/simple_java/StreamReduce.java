@@ -9,16 +9,14 @@ public class StreamReduce {
         String[] array = {"pioke", "mjoke"};
 
         // String example
-        String stringResult = Arrays.stream(array)
-                .reduce("", (actual, element) -> actual + "[" + element + "]");
-
-        System.out.println(stringResult);
+        String result = Arrays.stream(array).reduce("", (actual, element) -> actual + "[" + element + "]");
+        System.out.println(result);
 
         // Integer example
-        Integer integerResult = Arrays.stream(array)
+        Integer letterSum = Arrays.stream(array)
                 .map(String::length)
                 .reduce(0, Integer::sum);
 
-        System.out.println(integerResult);
+        System.out.println(letterSum);
     }
 }

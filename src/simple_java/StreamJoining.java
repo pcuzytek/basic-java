@@ -7,10 +7,7 @@ public class StreamJoining {
 
     public static void main(String[] args) {
         String[] names = {"Mariola", "Magdalena", "Piotr", "Jacek", "Bronisław", "Anna"};
-
-        String collect = Arrays.stream(names)
-                .collect(Collectors.joining(" | ", "START: ", " :END"));
-
+        String collect = Arrays.stream(names).collect(Collectors.joining(" | ", "START: ", " :END"));
         System.out.println(collect);
     }
 }
